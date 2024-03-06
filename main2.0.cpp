@@ -140,7 +140,7 @@ private:
             switchMusicTrack();
         } else if (action == 'l') {
             cout << "Don't give up, you got this!";
-            this_thread::sleep_for(chrono::seconds(2));
+            Sleep(2000);
         } else {
             player.move(action);
             checkForCombat();
@@ -363,7 +363,7 @@ private:
         for (auto& frame : frames) {
             clearScreen();
             cout << frame << endl;
-            this_thread::sleep_for(chrono::milliseconds(500));
+            Sleep(500);
         }
 
         bool coinResult = rand() % 2;
@@ -405,7 +405,7 @@ cout << "             `-._,-'   `-._______,-'   `-._,-'\n";
             }
         }
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        this_thread::sleep_for(chrono::seconds(2));
+        Sleep(2000);
     }
 
     bool checkLoseCondition() {
